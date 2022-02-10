@@ -99,68 +99,67 @@ alert ("Detalle general del pedido: \n\n" +
 
  */
          
-const nombresDelPersonal = ["Agustin", "Walter", "Leonardo", "Julieta", "Juan", "Maria", "Pedro", "Miguel"]
+         console.log('paso')
 
-let nuevoEmpleado = "";
-
-do {
-    if (nuevoEmpleado != "") {
-        alert("El empleado ya esta en la nomina, ingrese uno nuevo")
-    }
-
-    nuevoEmpleado = prompt("Ingrese un nuevo nombre");
-
-    while (nombresDelPersonal.indexOf(nuevoEmpleado) != -1)
-
-        alert("El nuevo empleado" + " " + nuevoEmpleado + " " + "ha sido registrado");
-}
-
-const personalDespedido = nombresDelPersonal.filter( (posicion, numeros) => { 
-    return posicion === nombresDelPersonal.indexOf (posicion);
-
-})
-
-console.log (personalDespedido)
-
-
-const materialesTrabajo = [
-
-    { id= 01, objeto: "Notebook" },
-    { id= 02, objeto: "Teclado" },
-    { id= 03, objeto: "Monitor" },
-    { id= 04, objeto: "Mouse" }
-]
-
-for (const materiales of materialesTrabajo) {
-    console.log(materiales.id);
-    console.log(materiales.materiales);
-
-}
-
-class objeto {
-    constructor(nombre, precio) {
-        this.nombre = nombre.toUpperCase();
-        this.precio = precio.parseFloat(precio);
-        this.adquirido = false;
-    }
-    sumarIva() {
-        this.precio = this.precio * 1.21;
-    }
-}
-
-
-const objetos = [];
-
-const objeto1 = new objetos("microfono", "150");
-objetos.push(objeto1);
-objetos.push(new objeto("impresora", "275"));
-
-console.log(objetos);
-
-for (const objeto of objetos) {
-    objeto.sumarIva();
-}
-
-console.log(objetos);
-
-
+         const nombresDelPersonal = ["Agustin", "Walter", "Leonardo", "Julieta", "Juan", "Maria", "Pedro", "Miguel"]
+         
+         let nuevoEmpleado = "";
+         
+         do {
+             if (nuevoEmpleado != "") {
+                 alert("El empleado ya esta en la nomina, ingrese uno nuevo")
+             }
+         
+             nuevoEmpleado = prompt("Ingrese un nuevo nombre");
+         
+             
+         }while (nombresDelPersonal.indexOf(nuevoEmpleado) != -1)
+         
+         alert("El nuevo empleado" + " " + nuevoEmpleado + " " + "ha sido registrado");
+         
+         const personalDespedido = nombresDelPersonal.filter( (posicion, numeros) => {
+             return numeros === nombresDelPersonal.indexOf (posicion);
+         })
+         
+         console.log (personalDespedido)
+         
+         
+         const materialesTrabajo = [
+         
+             { id: 01, objeto: "Notebook" },
+             { id: 02, objeto: "Teclado" },
+             { id: 03, objeto: "Monitor" },
+             { id: 04, objeto: "Mouse" }
+         ]
+         
+         for (const materiales of materialesTrabajo) {
+             console.log(materiales.id);
+             console.log(materiales.materiales);
+         
+         }
+         
+         class objeto {
+             constructor(nombre, precio) {
+                 this.nombre = nombre.toUpperCase();
+                 this.precio = precio.parseFloat(precio);
+                 this.adquirido = false;
+             }
+             sumarIva() {
+                 this.precio = this.precio * 1.21;
+             }
+         }
+         
+         
+         const objetos = [];
+         
+         const objeto1 = new objetos("microfono", "150");
+         objetos.push(objeto1);
+         objetos.push(new objeto("impresora", "275"));
+         
+         console.log(objetos);
+         
+         for (const objeto of objetos) {
+             objeto.sumarIva();
+         }
+         
+         console.log(objetos);
